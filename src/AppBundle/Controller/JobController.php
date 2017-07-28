@@ -33,13 +33,12 @@ class JobController extends Controller
      * @ApiDoc(
      *     section="job",
      *     description="run job",
-     *     parameters={{"name"="project", "dataType"="string", "required"=true},{"name"="spider","dataType"="string","required"=true}}
+     *     parameters={{"name"="spider","dataType"="string","required"=true}}
      * )
      * @View()
      */
-    public function postAction(Request $request)
+    public function postAction($project, Request $request)
     {
-        $project = $request->request->get('project');
         $spider = $request->request->get('spider');
         return $this->get('scrapy_helper')->runSpider($project, $spider);
     }
@@ -48,13 +47,12 @@ class JobController extends Controller
      * @ApiDoc(
      *     section="job",
      *     description="cancel job",
-     *     parameters={{"name"="project", "dataType"="string", "required"=true},{"name"="job","dataType"="string","required"=true}}
+     *     parameters={{"name"="job","dataType"="string","required"=true}}
      * )
      * @View()
      */
-    public function deleteAction(Request $request)
+    public function deleteAction($project, Request $request)
     {
-        $project = $request->request->get('project');
         $job = $request->request->get('job');
         return $this->get('scrapy_helper')->cancelJob($project, $job);
     }

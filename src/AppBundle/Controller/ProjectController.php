@@ -26,4 +26,12 @@ class ProjectController extends Controller
     {
         return $this->get('scrapy_helper')->getProjects();
     }
+
+    /**
+     * @View()
+     */
+    public function getAction($project)
+    {
+
+    }
 }

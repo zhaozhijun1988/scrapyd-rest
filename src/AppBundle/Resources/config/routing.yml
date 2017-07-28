@@ -9,7 +9,9 @@ whale_scrapy_project:
 whale_scrapy_spider:
     resource: "@AppBundle/Controller/SpiderController.php"
     type:     rest
+    parent:   whale_scrapy_project
 
 whale_scrapy_job:
     resource: "@AppBundle/Controller/JobController.php"
     type:     rest
+    parent:   whale_scrapy_project
