@@ -56,6 +56,16 @@ class ScrapydHelper
         return $this->format($res);
     }
 
+    public function deleteProject($project)
+    {
+        $res = $this->client->request('post', $this->gateway . '/delproject.json', [
+            'query' => [
+                'project' => $project
+            ]
+        ]);
+        return $this->format($res);
+    }
+
     /**
      * @param $project
      * @param $job

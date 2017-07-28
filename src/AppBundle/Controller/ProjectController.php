@@ -34,4 +34,15 @@ class ProjectController extends Controller
     {
 
     }
+
+    /**
+     * @ApiDoc(
+     *     section="project"
+     * )
+     * @View()
+     */
+    public function deleteAction($project)
+    {
+        return $this->get('scrapy_helper')->deleteProject($project);
+    }
 }
