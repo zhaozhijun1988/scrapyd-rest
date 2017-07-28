@@ -1,0 +1,15 @@
+whale_scrapy_default:
+    resource: "@AppBundle/Controller/DefaultController.php"
+    type:     rest
+
+whale_scrapy_project:
+    resource: "@AppBundle/Controller/ProjectController.php"
+    type:     rest
+
+whale_scrapy_spider:
+    resource: "@AppBundle/Controller/SpiderController.php"
+    type:     rest
+
+whale_scrapy_job:
+    resource: "@AppBundle/Controller/JobController.php"
+    type:     rest
